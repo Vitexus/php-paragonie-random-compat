@@ -1,0 +1,23 @@
+Source: php-paragonie-random-compat
+Section: php
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Homepage: https://github.com/paragonie/random_compat
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/Vitexus/php-paragonie-random-compat.git
+Vcs-Browser: https://github.com/Vitexus/php-paragonie-random-compat
+
+Package: php-paragonie-random-compat
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ php-common
+Description: PHP 5.x polyfill for random_bytes() and random_int()
+ Provides a polyfill for the random_bytes() and random_int() functions
+ introduced in PHP 7. On PHP 7+ this library is effectively a no-op,
+ but is required for compatibility with libraries that declare it as
+ a dependency.

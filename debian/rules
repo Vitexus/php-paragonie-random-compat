@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p debian/php-paragonie-random-compat/usr/share/php/paragonie/random_compat
+	cp -r lib/* debian/php-paragonie-random-compat/usr/share/php/paragonie/random_compat/
+
+override_dh_auto_test:
